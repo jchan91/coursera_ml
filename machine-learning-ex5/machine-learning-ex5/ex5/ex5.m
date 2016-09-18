@@ -199,7 +199,6 @@ end
 
 % fprintf('Program paused. Press enter to continue.\n');
 % pause;
-return;
 
 %% =========== Part 8: Validation for Selecting Lambda =============
 %  You will now implement validationCurve to test various values of 
@@ -222,5 +221,6 @@ for i = 1:length(lambda_vec)
             lambda_vec(i), error_train(i), error_val(i));
 end
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+% fprintf('Program paused. Press enter to continue.\n');
+% pause;
+return;
