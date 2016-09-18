@@ -19,13 +19,13 @@ grad = zeros(size(theta));
 %               You should set J to the cost and grad to the gradient.
 %
 
+% Compute cost
+e = hypothesis(X, theta) - y;
+J = (e' * e) / (2 * m);
 
-
-
-
-
-
-
+% Add the regularization
+reg = (theta(2:end)' * theta(2:end)) * lambda / (2 * m);
+J = J + reg;
 
 
 
@@ -37,5 +37,5 @@ grad = grad(:);
 end
 
 function h = hypothesis(X, theta)
-    
+    h = X * theta;
 end
