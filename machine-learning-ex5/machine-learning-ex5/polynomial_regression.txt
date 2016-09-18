@@ -1,0 +1,12 @@
+Polynomial Regression
+=====================
+We can re-represent polynomial regression as linear regression of a hyper plane to a data set
+To learn theta_0 * x + theta_1 * x^2 + theta_2 * x^3 + ...
+We can re-write x^2 and x^3 as a different features:
+
+x_0 = x
+x_1 = x^2
+x_2 = x^3
+...
+
+Thus h = theta_0 * x_0 + theta_1 * x_1 + ...
