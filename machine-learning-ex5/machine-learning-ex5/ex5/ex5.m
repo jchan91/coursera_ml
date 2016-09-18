@@ -152,7 +152,6 @@ fprintf('  %f  \n', X_poly(1, :));
 
 % fprintf('\nProgram paused. Press enter to continue.\n');
 % pause;
-return;
 
 
 %% =========== Part 7: Learning Curve for Polynomial Regression =============
@@ -162,7 +161,12 @@ return;
 %  lambda to see how the fit and learning curve change.
 %
 
-lambda = 0;
+lambda = 2.25;
+
+% Helper to play with lambda
+% for l = 0:0.1:1
+% lambda = l;
+
 [theta] = trainLinearReg(X_poly, y, lambda);
 
 % Plot training data and fit
@@ -190,8 +194,12 @@ for i = 1:m
     fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_val(i));
 end
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
+% end
+
+% fprintf('Program paused. Press enter to continue.\n');
+% pause;
+return;
 
 %% =========== Part 8: Validation for Selecting Lambda =============
 %  You will now implement validationCurve to test various values of 
