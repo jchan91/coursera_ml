@@ -161,7 +161,7 @@ fprintf('  %f  \n', X_poly(1, :));
 %  lambda to see how the fit and learning curve change.
 %
 
-lambda = 2.25;
+lambda = 3;
 
 % Helper to play with lambda
 % for l = 0:0.1:1
@@ -223,4 +223,7 @@ end
 
 % fprintf('Program paused. Press enter to continue.\n');
 % pause;
-return;
+
+% 3.4 Computing test set error
+J_test = linearRegCostFunction(X_poly_test, ytest, theta, 0)
+
