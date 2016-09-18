@@ -53,11 +53,17 @@ error_val   = zeros(m, 1);
 
 % ---------------------- Sample Solution ----------------------
 
-
-
-
-
-
+for i = 1:m
+    % Compute the train/cross validation errors using i training examples
+    
+    % Train WITH regularization on i examples
+    theta = trainLinearReg(X(1:i,:), y(1:i), lambda);
+    
+    % Compute learning curve errors
+    % Note, J_train, J_cv is computed without regularization (lambda = 0)
+    error_train(i) = linearRegCostFunction(X(1:i,:), y(1:i), theta, 0);
+    error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
+end
 
 % -------------------------------------------------------------
 

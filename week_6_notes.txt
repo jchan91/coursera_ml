@@ -17,3 +17,10 @@ J_train(theta) where lambda = 0
 J_cv(theta) where lambda = 0
 
 Choose the best (theta, lambda) pair that has lowest J_cv
+
+
+
+Questions:
+==========
+- How do you know when to increase features as opposed to reducing regularization?
+- How do you know when optimizer is reaching local minima as opposed to having a problem of bias or variance?

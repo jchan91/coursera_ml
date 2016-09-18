@@ -35,9 +35,9 @@ load ('ex5data1.mat');
 m = size(X, 1);
 
 % Plot training data
-% plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
-% xlabel('Change in water level (x)');
-% ylabel('Water flowing out of the dam (y)');
+plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
+xlabel('Change in water level (x)');
+ylabel('Water flowing out of the dam (y)');
 
 % fprintf('Program paused. Press enter to continue.\n');
 % pause;
@@ -70,7 +70,6 @@ fprintf(['Gradient at theta = [1 ; 1]:  [%f; %f] '...
 
 % fprintf('Program paused. Press enter to continue.\n');
 % pause;
-return;
 
 %% =========== Part 4: Train Linear Regression =============
 %  Once you have implemented the cost and gradient correctly, the
@@ -93,9 +92,8 @@ hold on;
 plot(X, [ones(m, 1) X]*theta, '--', 'LineWidth', 2)
 hold off;
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
+% fprintf('Program paused. Press enter to continue.\n');
+% pause;
 
 %% =========== Part 5: Learning Curve for Linear Regression =============
 %  Next, you should implement the learningCurve function. 
@@ -122,8 +120,9 @@ for i = 1:m
     fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_val(i));
 end
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+% fprintf('Program paused. Press enter to continue.\n');
+% pause;
+return;
 
 %% =========== Part 6: Feature Mapping for Polynomial Regression =============
 %  One solution to this is to use polynomial regression. You should now
