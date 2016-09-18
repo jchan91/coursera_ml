@@ -122,7 +122,6 @@ end
 
 % fprintf('Program paused. Press enter to continue.\n');
 % pause;
-return;
 
 %% =========== Part 6: Feature Mapping for Polynomial Regression =============
 %  One solution to this is to use polynomial regression. You should now
@@ -151,9 +150,9 @@ X_poly_val = [ones(size(X_poly_val, 1), 1), X_poly_val];           % Add Ones
 fprintf('Normalized Training Example 1:\n');
 fprintf('  %f  \n', X_poly(1, :));
 
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
-
+% fprintf('\nProgram paused. Press enter to continue.\n');
+% pause;
+return;
 
 
 %% =========== Part 7: Learning Curve for Polynomial Regression =============
