@@ -1,0 +1,19 @@
+Selecting Optimal Regularization and Model
+==========================================
+
+let lambda_set = { 0, 1, 2, 3, 4, ... }
+let theta_set = { 3, 4, 5, 6, ... }
+
+Select lambda and model:
+lambda = 0
+theta = 3
+
+Train on given theta and lambda using training set...
+
+For each lambda/theta combination:
+Compute:
+========
+J_train(theta) where lambda = 0
+J_cv(theta) where lambda = 0
+
+Choose the best (theta, lambda) pair that has lowest J_cv
