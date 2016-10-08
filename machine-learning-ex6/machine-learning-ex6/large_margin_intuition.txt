@@ -1,0 +1,17 @@
+Large Margin Intuition
+======================
+- Remember these conditions when thinking of the following principles:
+- When C is large, the cost function J = C * 0 + sum(theta^2)
+
+Observation 1:
+=> We are trying to make theta as small as possible!
+
+Then we ask, how do we get large margin?
+- Theta is perpendicular to the decision boundary!
+- z = theta * x, which is a dot product between theta and x (projection). 
+  This is how we get theta * x == p * theta, where p is the length of projection
+- We are also optimizing so that theta * x > 1 when y = 1, and theta * x < -1 when y = 1
+
+Observation 2:
+=> If we are optimizing to make min(theta), observation 1, then to have theta * x > 1 
+   or theta * x < -1 is equivalent to maximizing p (since theta * x == p * theta)
